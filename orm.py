@@ -6,6 +6,7 @@ db = MySQLDatabase('t_pers', user='root',passwd='root')
 def main():
     
     command = str(input('''
+        herramienta SE
         Sistema experto 
         [c]omenzar
     '''))
@@ -22,19 +23,19 @@ def eval_gen():
     else:
         r2 = str(input(see_preg('2',Question)+'\n>>> '))
         if r2.lower() == comp:
-            preguntas_eval('1', '2', '3', '4', '5', Question_esp, 'diagnostico b')
+            preguntas_eval('6', '7', '8', '9', '10', Question_esp, 'diagnostico b')
         else:
             r3 = str(input(see_preg('3',Question)+'\n>>> '))
             if r3.lower() == comp:
-                preguntas_eval('1', '2', '3', '4', '5', Question_esp, 'diagnostico c')
+                preguntas_eval('11', '12', '13', '14', '15', Question_esp, 'diagnostico c')
             else:
                 r4 = str(input(see_preg('4',Question)+'\n>>> '))
                 if r4.lower() == comp:
-                    preguntas_eval('1', '2', '3', '4', '5', Question_esp, 'diagnostico d')
+                    preguntas_eval('16', '17', '18', '19', '20', Question_esp, 'diagnostico d')
                 else:
                     r5 = str(input(see_preg('5',Question)+'\n>>> '))
                     if r5.lower() == comp:
-                        preguntas_eval('1', '2', '3', '4', '5', Question_esp, 'diagnostico e')    
+                        preguntas_eval('21', '22', '23', '24', '25', Question_esp, 'diagnostico e')    
 
 
 
@@ -70,6 +71,42 @@ def preguntas_eval(a, b, c, d, e, n_table,diagnostico):
     else:
         print('error')
 
+def cargar_preguntas():
+    Question_esp.create_table()
+
+    preguntas=[
+        '¿1?',
+        '¿2?',
+        '¿3?',
+        '¿4?',
+        '¿5?',
+        '¿6?',
+        '¿7?',
+        '¿8?',
+        '¿9?',
+        '¿10?',
+        '¿11?',
+        '¿12?',
+        '¿13?',
+        '¿14?',
+        '¿15?',
+        '¿16?',
+        '¿17?',
+        '¿18?',
+        '¿19?',
+        '¿20?',
+        '¿21?',
+        '¿22?',
+        '¿23?',
+        '¿24?',
+        '¿25?',
+    ]
+      
+    for i in range(0,25):
+        create_preg(preguntas[i], Question_esp)
+    
+
+
 
 class Question(Model,object):
     pregunta = CharField(unique=True)
@@ -97,24 +134,11 @@ class Question_esp(Model):
         db_table = 'preguntas_esp1'
     
 
-if __name__ == '__main__':
-    main()
-    """
-    Question_esp.create_table()
 
-    preguntas=[
-        '¿a?',
-        '¿b?',
-        '¿c?',
-        '¿d?',
-        '¿e?',
-    ]
-      
-    for i in range(0,5):
-        create_preg(preguntas[i], Question_esp)
-    
-        
-    """    
+if __name__ == '__main__':
+    #cargar_preguntas()
+    main()
+   
 
     
     #preguntas_eval('1','2','3','4','5',Question)
