@@ -6,7 +6,7 @@ db = MySQLDatabase('t_pers', user='root',passwd='root')
 def main():
     
     command = str(input('''
-        herramienta SE
+        herramienta SE dd
         Sistema experto 
         [c]omenzar
     '''))
