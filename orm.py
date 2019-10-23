@@ -80,17 +80,7 @@ class Question(Model,object):
         database = db
         db_table = 'preguntas'
 
-    def __init__(self, preg, n_table, id_table, a, b, c, d, e, diagnostico):
-        self.preg = preg
-        self.n_table = n_table
-        self.id_table = id_table
-        self.a = a
-        self.b = b
-        self.c = c
-        self.d = d
-        self.e = e
-        self.diagnostico = diagnostico
-
+    
 
 
 
