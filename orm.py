@@ -9,8 +9,13 @@ terminal = '>>> '
 def main():
     
     command = str(input('''
-        ***********************************
-        Sistema experto 
+        ************************************************************
+        Sistema experto: Campos de acción de la Ingeniería Biomédica
+        ************************************************************
+        Para su correcto funcionamiento si su respuesta es:
+        Al contestar Si por favor abreviar con >>> s
+        Al contestar No por favor abreviar con >>> n
+        ************************************************************
         [c]omenzar
     >>>'''))
     if command.lower() == 'c':
@@ -72,7 +77,7 @@ def preguntas_eval(a, b, c, d, e, n_table,diagnostico):
     if (r1 == r2) and (r3 == r4) and (r5 == r1):
         print('El campo de acción de la ingeniería biomédica es: {}.'.format(diagnostico))
     else:
-        print('error')
+        print('Por favor realice nuevamente la evaluación.')
 
 def cargar_preguntas_esp():
     Question_esp.create_table()
@@ -83,21 +88,25 @@ def cargar_preguntas_esp():
         '¿Desarrollar herramientas que permitan la identificación de la variabilidad en los dignosticos persona a persona?',
         '¿Comprender los requisitos de comtatibilidad y aspectos de seguridad de los sistemas biomédicos?',
         '¿Crear sistemas biomédicos usando sensores específicos y dispositivos móviles?',
+
         '¿Desarrollo e investigación para el mejoramiento de maquinas y procedimientos de rayos X?',
         '¿Desarrollo e investigación para el mejoramiento de maquinas y procedimientos de ultrasonido?',
         '¿Desarrollo e investigación para el mejoramiento de maquinas y procedimientos de resonancia magnética nuclear?',
         '¿Diseñar procedimientos de adquisición, almacenamiento, técnicas de procesamiento de imágenes digitales?',
         '¿Desarrollar procesamiento de imágenes a partir de tecnicas como convolución, filtraje no-lineal, detección de contorno?',
+
         '¿Analizar las caracteristicas de las señales electrofisiológicas para obtener información conllevando a nuevos avances en fisiología y biofísica?',
         '¿Desarrollar instrumentación que permita construir sensores y ropa inteligente?',
         '¿Desarrollar herramientas que permitan limpiar y aumentar la calidad de las señales?',
         '¿Realizar investigaciones que permitan el monitoreo de aspectos como (ritmo de sueño) identificando patologias como estrés y epilepsia?',
         '¿Diseñar tratamientos que permitan combatir trastornos neurodegenerativos como el Alzheimer?',
+
         '¿Desarrollo de dispositivos de asistencia a discapacidades visuales?',
         '¿Desarrollo de dispositivos de asistencia a discapacidades auditivas?',
-        '¿Realizar invesigaciones de interfases cerebro-humano?',
+        '¿Realizar investigaciones de interfases cerebro-humano?',
         '¿Realizar investigaciones para el analisis y decodificación de información neuronal?',
         '¿Desarrollar protesis que permitan mayor movilidad y funcionalidad en las personas que las van a usar?',
+
         '¿Garantizar el cumplimiento de las normas para la seguridad de los equipos y las instalaciones?',
         '¿Investigar los accidentes y daños relativos a la instrumentación biomédica?',
         '¿Cumplir con los procedimientos de medidas y de verificación estableciendo para la instrumentación biomédica?',
